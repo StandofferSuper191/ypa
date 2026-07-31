@@ -1,0 +1,868 @@
+[
+  {
+    "dns": {
+      "servers": [
+        {
+          "address": "1.1.1.1"
+        },
+        {
+          "address": "77.88.8.8"
+        }
+      ]
+    },
+    "inbounds": [
+      {
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "userLevel": 8
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "fakedns",
+            "quic"
+          ],
+          "enabled": true
+        },
+        "tag": "socks"
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "slarktop.techstep2.com",
+              "port": 443,
+              "users": [
+                {
+                  "id": "a7587d6c-ee79-4971-9779-20effa750e1a",
+                  "flow": "",
+                  "encryption": "none"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "reality",
+          "realitySettings": {
+            "fingerprint": "firefox",
+            "publicKey": "Op8VxSDSGZV-_1osyQZmYKqNLRFlGItGeAWg6GGzBTQ",
+            "serverName": "slarktop.techstep2.com",
+            "shortId": "6ba85179e30d"
+          },
+          "xhttpSettings": {
+            "path": "/xhttp",
+            "host": "slarktop.techstep2.com",
+            "mode": "stream-one"
+          }
+        }
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇵🇱 Польша",
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "ip": [
+            "geoip:private"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "domain": [
+            "geosite:category-ru"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "protocol": [
+            "bittorrent"
+          ],
+          "outboundTag": "block",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "servers": [
+        {
+          "address": "1.1.1.1"
+        },
+        {
+          "address": "77.88.8.8"
+        }
+      ]
+    },
+    "inbounds": [
+      {
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "userLevel": 8
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "fakedns",
+            "quic"
+          ],
+          "enabled": true
+        },
+        "tag": "socks"
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "slark.noordware.com",
+              "port": 443,
+              "users": [
+                {
+                  "id": "a7587d6c-ee79-4971-9779-20effa750e1a",
+                  "flow": "",
+                  "encryption": "none"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "realitySettings": {
+            "fingerprint": "ios",
+            "publicKey": "ULTJ3pKkMFJaHL3Qlu8egrErCWuzxkQ7odgqnq-IeW4",
+            "serverName": "slark.noordware.com",
+            "shortId": "6ba85179e30d"
+          },
+          "grpcSettings": {
+            "serviceName": "grpc",
+            "multiMode": false
+          }
+        }
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇪🇪 Эстония",
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "ip": [
+            "geoip:private"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "domain": [
+            "geosite:category-ru"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "protocol": [
+            "bittorrent"
+          ],
+          "outboundTag": "block",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "servers": [
+        {
+          "address": "1.1.1.1"
+        },
+        {
+          "address": "77.88.8.8"
+        }
+      ]
+    },
+    "inbounds": [
+      {
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "userLevel": 8
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "fakedns",
+            "quic"
+          ],
+          "enabled": true
+        },
+        "tag": "socks"
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "slark.guseff.su",
+              "port": 443,
+              "users": [
+                {
+                  "id": "a7587d6c-ee79-4971-9779-20effa750e1a",
+                  "flow": "xtls-rprx-vision",
+                  "encryption": "none"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "fingerprint": "firefox",
+            "publicKey": "v82LBurkDmZ0WQLtzr0a5dohCFfUOzkA6M14W1GDbnc",
+            "serverName": "slark.guseff.su",
+            "shortId": "6ba85179e30d"
+          }
+        }
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇩🇪 Германия | Универсальный ⚡",
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "ip": [
+            "geoip:private"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "domain": [
+            "geosite:category-ru"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "protocol": [
+            "bittorrent"
+          ],
+          "outboundTag": "block",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "servers": [
+        {
+          "address": "1.1.1.1"
+        },
+        {
+          "address": "77.88.8.8"
+        }
+      ]
+    },
+    "inbounds": [
+      {
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "userLevel": 8
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "fakedns",
+            "quic"
+          ],
+          "enabled": true
+        },
+        "tag": "socks"
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "slarktop.aktion.cl",
+              "port": 443,
+              "users": [
+                {
+                  "id": "a7587d6c-ee79-4971-9779-20effa750e1a",
+                  "flow": "xtls-rprx-vision",
+                  "encryption": "none"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "fingerprint": "firefox",
+            "publicKey": "v82LBurkDmZ0WQLtzr0a5dohCFfUOzkA6M14W1GDbnc",
+            "serverName": "slarktop.aktion.cl",
+            "shortId": "6ba85179e30d"
+          }
+        }
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇩🇪 Германия 24/7 ⚡",
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "ip": [
+            "geoip:private"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "domain": [
+            "geosite:category-ru"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "protocol": [
+            "bittorrent"
+          ],
+          "outboundTag": "block",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "servers": [
+        {
+          "address": "1.1.1.1"
+        },
+        {
+          "address": "77.88.8.8"
+        }
+      ]
+    },
+    "inbounds": [
+      {
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "userLevel": 8
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "fakedns",
+            "quic"
+          ],
+          "enabled": true
+        },
+        "tag": "socks"
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "slark.sos.al",
+              "port": 443,
+              "users": [
+                {
+                  "id": "a7587d6c-ee79-4971-9779-20effa750e1a",
+                  "flow": "xtls-rprx-vision",
+                  "encryption": "none"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "fingerprint": "firefox",
+            "publicKey": "v82LBurkDmZ0WQLtzr0a5dohCFfUOzkA6M14W1GDbnc",
+            "serverName": "slark.sos.al",
+            "shortId": "6ba85179e30d"
+          }
+        }
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇩🇪 Германия | Резерв",
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "ip": [
+            "geoip:private"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "domain": [
+            "geosite:category-ru"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "protocol": [
+            "bittorrent"
+          ],
+          "outboundTag": "block",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "servers": [
+        {
+          "address": "1.1.1.1"
+        },
+        {
+          "address": "77.88.8.8"
+        }
+      ]
+    },
+    "inbounds": [
+      {
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "userLevel": 8
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "fakedns",
+            "quic"
+          ],
+          "enabled": true
+        },
+        "tag": "socks"
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "slarkgame.n43.pw",
+              "port": 443,
+              "users": [
+                {
+                  "id": "a7587d6c-ee79-4971-9779-20effa750e1a",
+                  "flow": "xtls-rprx-vision",
+                  "encryption": "none"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "fingerprint": "firefox",
+            "publicKey": "v82LBurkDmZ0WQLtzr0a5dohCFfUOzkA6M14W1GDbnc",
+            "serverName": "slarkgame.n43.pw",
+            "shortId": "6ba85179e30d"
+          }
+        }
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇫🇮 Финляндия №1",
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "ip": [
+            "geoip:private"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "domain": [
+            "geosite:category-ru"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "protocol": [
+            "bittorrent"
+          ],
+          "outboundTag": "block",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "servers": [
+        {
+          "address": "1.1.1.1"
+        },
+        {
+          "address": "77.88.8.8"
+        }
+      ]
+    },
+    "inbounds": [
+      {
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "userLevel": 8
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "fakedns",
+            "quic"
+          ],
+          "enabled": true
+        },
+        "tag": "socks"
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "slarktop.nlti.cl",
+              "port": 443,
+              "users": [
+                {
+                  "id": "a7587d6c-ee79-4971-9779-20effa750e1a",
+                  "flow": "",
+                  "encryption": "none"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "grpc",
+          "security": "reality",
+          "realitySettings": {
+            "fingerprint": "ios",
+            "publicKey": "d1K3Uy5a4gGeQXW1TgMflzcOr9zDa-q7dVmp0MzkOlw",
+            "serverName": "slarktop.nlti.cl",
+            "shortId": "6ba85179e30d"
+          },
+          "grpcSettings": {
+            "serviceName": "grpc",
+            "multiMode": false
+          }
+        }
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇫🇮 Финляндия №2",
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "ip": [
+            "geoip:private"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "domain": [
+            "geosite:category-ru"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "protocol": [
+            "bittorrent"
+          ],
+          "outboundTag": "block",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "servers": [
+        {
+          "address": "1.1.1.1"
+        },
+        {
+          "address": "77.88.8.8"
+        }
+      ]
+    },
+    "inbounds": [
+      {
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "userLevel": 8
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "fakedns",
+            "quic"
+          ],
+          "enabled": true
+        },
+        "tag": "socks"
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "slarktop.viange.eu",
+              "port": 443,
+              "users": [
+                {
+                  "id": "a7587d6c-ee79-4971-9779-20effa750e1a",
+                  "flow": "xtls-rprx-vision",
+                  "encryption": "none"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "fingerprint": "firefox",
+            "publicKey": "rKk5BU7N6Bm6Sgm7uHu6iIpl4U5fZViRMdanSu9dBlU",
+            "serverName": "slarktop.viange.eu",
+            "shortId": "6ba85179e30d"
+          }
+        }
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇺🇸 США",
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "ip": [
+            "geoip:private"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "domain": [
+            "geosite:category-ru"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "protocol": [
+            "bittorrent"
+          ],
+          "outboundTag": "block",
+          "type": "field"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "servers": [
+        {
+          "address": "1.1.1.1"
+        },
+        {
+          "address": "77.88.8.8"
+        }
+      ]
+    },
+    "inbounds": [
+      {
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "userLevel": 8
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "fakedns",
+            "quic"
+          ],
+          "enabled": true
+        },
+        "tag": "socks"
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "slark.sh8.no",
+              "port": 443,
+              "users": [
+                {
+                  "id": "a7587d6c-ee79-4971-9779-20effa750e1a",
+                  "flow": "",
+                  "encryption": "none"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "reality",
+          "realitySettings": {
+            "fingerprint": "firefox",
+            "publicKey": "H5490DiLcL9gCggaPCJbiI70D3feZlj0rhwAXOCMEUE",
+            "serverName": "slark.sh8.no",
+            "shortId": "6ba85179e30d"
+          },
+          "xhttpSettings": {
+            "path": "/xhttp",
+            "host": "slark.sh8.no",
+            "mode": "stream-one"
+          }
+        }
+      },
+      {
+        "protocol": "freedom",
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "tag": "block"
+      }
+    ],
+  }
+  
